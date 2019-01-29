@@ -9,6 +9,8 @@ Here in JavaScript, first imperatively using a arrow function notation, then tak
 
 (*highly recommend MPJ's [video series](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q/playlists) for all things JavaScript*). 
 
+## Impreative
+
 ```javascript
 // JavaScript ES6(+) arrow function notation
 const sqrt = (target, precision = 0.001, maxiter = 10000) => {
