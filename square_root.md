@@ -111,7 +111,8 @@ Result 1234567.000000978
 [Done] exited with code=0 in 0.053 seconds
 ```
 
-FP [1](https://flaviocopes.com/javascript-functional-programming/), [2](https://flaviocopes.com/javascript-loops-map-filter-reduce-find/), [3](https://medium.com/dailyjs/functional-js-with-es6-recursive-patterns-b7d0813ef9e3), [4](https://www.vojtechruzicka.com/javascript-hoisting-var-let-const-variables/), [5](https://javascript.info/recursion), [6](https://www.codementor.io/ajinkyax/functional-programming-with-javascript-es6-j4ysxgvpj), [7](https://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276)
+## A functional approach
+[1](https://flaviocopes.com/javascript-functional-programming/), [2](https://flaviocopes.com/javascript-loops-map-filter-reduce-find/), [3](https://medium.com/dailyjs/functional-js-with-es6-recursive-patterns-b7d0813ef9e3), [4](https://www.vojtechruzicka.com/javascript-hoisting-var-let-const-variables/), [5](https://javascript.info/recursion), [6](https://www.codementor.io/ajinkyax/functional-programming-with-javascript-es6-j4ysxgvpj), [7](https://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276)
 
 ```javascript
 let offset
@@ -170,4 +171,5 @@ Result 5445.000006041577
 ```
 
 **findBase** - works very well functionally and looks elegant and is easy to understand.
+
 **findSqrt** - less so; it looks complicated and as a tight loop is not as performant as the imperative equivalent and as a *brute force* approach not well suited for as a recursive implementation; the JavaScript stack limit will limit the depth of recursion that can be achieved, and the the operation will likely result in high memory usage. The function could be improve with *[currying](https://wsvincent.com/javascript-currying/)*
