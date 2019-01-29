@@ -144,29 +144,30 @@ const sqrt = (target, precision = 0.001, maxDepth = 10) => {
   )
 
   let ans = findSqrt(target, firstApprox)
-  console.log("\nFirst approx interations ", base + 1);
-  console.log("Brute force interations ", ans.recursion);
-  console.log("Offset achieved", ans.offset);
-  console.log("Sqrt at given precision", ans.guess);
-  console.log("\nTarget was", ans.target);
-  console.log("Result ", ans.result);
+  console.log('\nFirst approx interations', base + 1);
+  console.log('Brute force interations', ans.recursion);
+  console.log('Offset achieved', ans.offset);
+  console.log('Sqrt at given precision', ans.guess);
+  console.log('\nTarget was', ans.target);
+  console.log('Result ', ans.result);
 }
 ```
  
 ```css
 sqrt(5445, 0.00001, 3000)
 
-firstApprox 73.79452054794521
-firstApprox squares to 5445.631262901108
-firstApprox offset 0.6312629011081299
- 
+firstapprox 73.79452054794521
+FA squares to 5445.631262901108
+FA offset 0.6312629011081299 
+
+
 First approx interations 74
-Brute force interations 26
-Offset achieved 0.000009593301001586951
-Sqrt at given precision 73.79024329843057
+Brute force interations 42
+Offset achieved 0.000009073811270354781
+Sqrt at given precision 73.79024331897688
 
 Target was 5445
-Result 5445.000006041577
+Result 5445.000009073811
 
 [Done] exited with code=0 in 0.12 seconds
 ```
