@@ -110,4 +110,60 @@ Result 1234567.000000978
 [Done] exited with code=0 in 0.053 seconds
 ```
 
-FP 
+FP [1](https://flaviocopes.com/javascript-functional-programming/), [2](https://flaviocopes.com/javascript-loops-map-filter-reduce-find/), [3](https://medium.com/dailyjs/functional-js-with-es6-recursive-patterns-b7d0813ef9e3), [4](https://www.vojtechruzicka.com/javascript-hoisting-var-let-const-variables/), [5](https://javascript.info/recursion), [6](https://www.codementor.io/ajinkyax/functional-programming-with-javascript-es6-j4ysxgvpj), [7](https://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276)
+
+```javascript
+let  offset
+let  firstApprox
+let  base
+let  ans
+let  maxDepth
+let  depth
+
+"use strict"
+
+const  sqrt  = (target, precision  =  0.001, maxDepth  =  10) => {  
+const  findBase  = (target, base  =  1) =>
+  base  **  2  <=  target  ?  findBase(target, base+1):  base  -  1;
+let  base  =  findBase(target)
+let  firstApprox  =  base  + ((target  -  base  **  2) / (2  *  base))
+
+console.log('firstApprox', firstApprox)
+console.log('firstApprox squares to', firstApprox  **  2)
+console.log('firstApprox offset', Math.abs(target  -  firstApprox  **  2), '\n')
+
+const  findSqrt  = (target, guess, offset  =  1, depth  =  1) => (
+(Math.abs(offset) <=  precision  ||  depth  ==  maxDepth) ?
+{ guess:  guess, result:  guess  **  2, target:  target, recursion:  depth } :
+( findSqrt(target, guess  - (offset  *  Math.log(target) /  target),
+guess  **  2  -  target, depth  +  1)
+)
+)
+
+let  ans  =  findSqrt(target, firstApprox)
+console.log("\nFirst approx interations ", base  +  1);
+console.log("Brute force interations ", ans.recursion);
+console.log("Offset achieved", ans.offset);
+console.log("Sqrt at given precision", ans.guess);
+console.log("\nTarget was", ans.target);
+console.log("Result ", ans.result);
+}
+```
+  
+```javascript
+sqrt(5445, 0.00001, 3000)
+
+firstApprox 73.79452054794521
+firstApprox squares to 5445.631262901108
+firstApprox offset 0.6312629011081299
+  
+First approx interations 74
+Brute force interations 26
+Offset achieved 0.000009593301001586951
+Sqrt at given precision 73.79024329843057
+
+Target was 5445
+Result 5445.000006041577
+
+[Done] exited with code=0 in 0.12 seconds
+```
