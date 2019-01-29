@@ -138,17 +138,16 @@ const sqrt = (target, precision = 0.001, maxDepth = 10) => {
   const findSqrt = (target, guess, offset = 1, depth = 1) => (
     (Math.abs(offset) <= precision || depth == maxDepth) ?
       { guess: guess, result: guess ** 2, target: target, recursion: depth } :
-      ( findSqrt(target, guess - (offset * Math.log(target) / target),
-guess ** 2 - target, depth + 1))
+      ( findSqrt(target, guess - (offset * Math.log(target) / target), guess ** 2 - target, depth + 1))
   )
 
-let ans = findSqrt(target, firstApprox)
-console.log("\nFirst approx interations ", base + 1);
-console.log("Brute force interations ", ans.recursion);
-console.log("Offset achieved", ans.offset);
-console.log("Sqrt at given precision", ans.guess);
-console.log("\nTarget was", ans.target);
-console.log("Result ", ans.result);
+  let ans = findSqrt(target, firstApprox)
+  console.log("\nFirst approx interations ", base + 1);
+  console.log("Brute force interations ", ans.recursion);
+  console.log("Offset achieved", ans.offset);
+  console.log("Sqrt at given precision", ans.guess);
+  console.log("\nTarget was", ans.target);
+  console.log("Result ", ans.result);
 }
 ```
  
