@@ -1,3 +1,4 @@
+
 # Square Roots
 
 How to find a square root, programatically? Sounds simple right?? Maybe not so straight forwards, as discussed [here](https://math.stackexchange.com/questions/799339/how-to-calculate-the-square-root-of-a-number). 
@@ -123,22 +124,21 @@ let depth
 "use strict"
 
 const sqrt = (target, precision = 0.001, maxDepth = 10) => { 
-const findBase = (target, base = 1) =>
- base ** 2 <= target ? findBase(target, base+1): base - 1;
-let base = findBase(target)
-let firstApprox = base + ((target - base ** 2) / (2 * base))
+  const findBase = (target, base = 1) =>
+    base ** 2 <= target ? findBase(target, base+1): base - 1;
+  let base = findBase(target)
+  let firstApprox = base + ((target - base ** 2) / (2 * base))
 
-console.log('firstApprox', firstApprox)
-console.log('firstApprox squares to', firstApprox ** 2)
-console.log('firstApprox offset', Math.abs(target - firstApprox ** 2), '\n')
+  console.log('firstApprox', firstApprox)
+  console.log('firstApprox squares to', firstApprox ** 2)
+  console.log('firstApprox offset', Math.abs(target - firstApprox ** 2), '\n')
 
-const findSqrt = (target, guess, offset = 1, depth = 1) => (
-(Math.abs(offset) <= precision || depth == maxDepth) ?
-{ guess: guess, result: guess ** 2, target: target, recursion: depth } :
-( findSqrt(target, guess - (offset * Math.log(target) / target),
-guess ** 2 - target, depth + 1)
-)
-)
+  const findSqrt = (target, guess, offset = 1, depth = 1) => (
+    (Math.abs(offset) <= precision || depth == maxDepth) ?
+      { guess: guess, result: guess ** 2, target: target, recursion: depth } :
+      ( findSqrt(target, guess - (offset * Math.log(target) / target),
+guess ** 2 - target, depth + 1))
+  )
 
 let ans = findSqrt(target, firstApprox)
 console.log("\nFirst approx interations ", base + 1);
