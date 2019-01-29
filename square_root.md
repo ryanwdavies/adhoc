@@ -1,5 +1,5 @@
 
-# Square Roots
+# Square Root
 
 How to find a square root, programatically? Sounds simple right?? Maybe not so straight forwards, as discussed [here](https://math.stackexchange.com/questions/799339/how-to-calculate-the-square-root-of-a-number). 
 
@@ -9,7 +9,7 @@ Here in JavaScript, first imperatively using a arrow function notation, then tak
 
 (*highly recommend MPJ's [video series](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q/playlists) for all things JavaScript*). 
 
-## Impreative
+## Imperative
 
 ```javascript
 // JavaScript ES6(+) arrow function notation
