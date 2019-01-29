@@ -58,7 +58,7 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
 ```
 
 
-```css
+```javascript
 sqrt(2068, 0.000001, 300)
 
 firstApprox 45.477777777777774
@@ -77,7 +77,7 @@ Result 2068.000000708832
 ```
 
 sqrt(2) to 12 decimal places
-```css
+```javascript
 sqrt(2, 0.0000000000001, 300)
 
 firstApprox 1.5
@@ -95,7 +95,7 @@ Result 1.9999999999999971
 [Done] exited with code=0 in 0.053 seconds
 ```
 
-```css
+```javascript
 sqrt(1234567, 0.000001, 30000)
 
 firstApprox 1111.110711071107
@@ -153,7 +153,7 @@ const sqrt = (target, precision = 0.001, maxDepth = 10) => {
 }
 ```
  
-```css
+```javascript
 sqrt(5445, 0.00001, 3000)
 
 firstapprox 73.79452054794521
