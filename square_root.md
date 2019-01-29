@@ -152,7 +152,7 @@ console.log("Result ", ans.result);
 }
 ```
  
-```javascript
+```css
 sqrt(5445, 0.00001, 3000)
 
 firstApprox 73.79452054794521
