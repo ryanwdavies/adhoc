@@ -160,7 +160,6 @@ firstapprox 73.79452054794521
 FA squares to 5445.631262901108
 FA offset 0.6312629011081299 
 
-
 First approx interations 74
 Brute force interations 42
 Offset achieved 0.000009073811270354781
