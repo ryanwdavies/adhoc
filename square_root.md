@@ -170,8 +170,9 @@ Result 5445.000009073811
 [Done] exited with code=0 in 0.12 seconds
 ```
 
-**findBase** - looks elegant and is quite easy to understand.
+**findBase** - looks elegant and is quite easy to understand. 
 
-**findSqrt** - it looks complicated and, as a tight loop, is not as performant as the imperative implementation; *brute force*-style programmes is not well suited for recursive implementation: the JavaScript stack limit will limit the depth of recursion that can be achieved, and the the operation will likely result in high memory usage. The readability of the function could be improved with *[currying](https://wsvincent.com/javascript-currying/)*.
+**findSqrt** - it looks complicated and readability of the function could be improved with *[currying](https://wsvincent.com/javascript-currying/)*.
 
-In all a better candidate for the imperative approach.
+Neither, as tight loops, are not performant choices as functional implementations: *brute force*-style algorithms are not well suited for  recursive implementation; in JavaScript stack limit will limit the depth of recursion that can be achieved, and the the operation will likely result in high memory usage and expensive memory access patterns.
+
