@@ -23,10 +23,9 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
   let i;
   
   // first approximation
-  while (base ** 2 <= target) {
-    base++;
-  }
-  base--;
+  do {
+      base++;
+    } while (base ** 2 <= target) 
   firstApprox = base + (target - base ** 2) / (2 * base);
   console.log('firstapprox', firstApprox)
   console.log('firstApprox squares to', firstApprox ** 2)
