@@ -155,17 +155,18 @@ const sqrt = (target, precision = 0.001, maxDepth = 10) => {
 ```javascript
 sqrt(5445, 0.00001, 3000)
 
-firstapprox 73.79452054794521
-FA squares to 5445.631262901108
-FA offset 0.6312629011081299 
+firstApprox 73.79452054794521
+firstApprox squares to 5445.631262901108
+firstApprox offset 0.6312629011081299 
+
 
 First approx interations 74
-Brute force interations 42
-Offset achieved 0.000009073811270354781
-Sqrt at given precision 73.79024331897688
+Brute force interations 393
+Offset achieved undefined
+Sqrt at given precision 73.79024332208142
 
 Target was 5445
-Result 5445.000009073811
+Result  5445.000009531982
 
 [Done] exited with code=0 in 0.12 seconds
 ```
