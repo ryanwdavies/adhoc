@@ -138,7 +138,7 @@ const sqrt = (target, precision = 0.001, maxDepth = 10) => {
 
   const findSqrt = (target, guess, offset = 1, depth = 1) => (
     (Math.abs(offset) <= precision || depth == maxDepth) ?
-      { guess: guess, result: guess ** 2, target: target, recursion: depth } :
+      { guess: guess, result: guess ** 2, target: target, recursion: depth, offset: offset } :
       ( findSqrt(target, guess - (offset / target), guess ** 2 - target, depth + 1))
   )
 
@@ -161,7 +161,7 @@ firstApprox offset 0.6312629011081299
 
 First approx interations 74
 Brute force interations 393
-Offset achieved undefined
+Offset achieved 0.000009805368790694047
 Sqrt at given precision 73.79024332208142
 
 Target was 5445
