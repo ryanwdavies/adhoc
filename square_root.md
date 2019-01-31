@@ -129,8 +129,8 @@ const sqrt = (target, precision = 0.001, maxDepth = 10) => {
   const findBase = (target, base = 1) =>
     base ** 2 <= target ? findBase(target, base+1): base - 1;
     
-  let base = findBase(target)
-  let firstApprox = base + ((target - base ** 2) / (2 * base))
+  base = findBase(target)
+  firstApprox = base + ((target - base ** 2) / (2 * base))
 
   console.log('firstApprox', firstApprox)
   console.log('firstApprox squares to', firstApprox ** 2)
