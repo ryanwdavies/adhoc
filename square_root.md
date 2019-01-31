@@ -139,7 +139,7 @@ const sqrt = (target, precision = 0.001, maxDepth = 10) => {
   const findSqrt = (target, guess, offset = 1, depth = 1) => (
     (Math.abs(offset) <= precision || depth == maxDepth) ?
       { guess: guess, result: guess ** 2, target: target, recursion: depth } :
-      ( findSqrt(target, guess - (offset / target), guess ** 2 - target, depth + 1))
+      ( findSqrt(target, guess - (offset * Math.log(target) / target), guess ** 2 - target, depth + 1))
   )
 
   let ans = findSqrt(target, firstApprox)
