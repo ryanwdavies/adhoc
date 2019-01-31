@@ -176,3 +176,4 @@ Result 5445.000009073811
 
 Neither, as tight loops, are not performant choices as functional implementations: *brute force*-style algorithms are not well suited for  recursive implementation; in JavaScript stack limit will limit the depth of recursion that can be achieved, and the the operation will likely result in high memory usage and expensive memory access patterns.
 
+**TODO** - adapt for targets less than one.
