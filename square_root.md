@@ -14,7 +14,7 @@ Here in JavaScript; first imperatively using a arrow function notation, then tak
 ```javascript
 // JavaScript ES6(+) arrow function notation
 const sqrt = (target, precision = 0.001, maxiter = 10000) => {
-  "use strict"
+ 
   // block scope
   let offset;
   let firstApprox;
@@ -38,7 +38,6 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
     if (Math.abs(offset) <= precision) {
       break; 
     } else {
-      console.log('offset', offset)
       // we use the natural log as a coefficent as it yielded
       // the fewest interations during testing; the optimal 
       // coffecient value is not known and the relationship is
