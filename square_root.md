@@ -50,6 +50,18 @@ Target was 26234
 Result  26233.999992941543
 ````
 
+````css
+sqrt(264, 0.00001, 300)
+
+Brute force interations  55
+Required precision 0.00001
+Offset achieved -0.00000619792973566291
+Sqrt at required precision 16.248077000000023
+
+Target was 264
+Result  264.00000619792974
+````
+
 
 ## Imperative
 
@@ -115,6 +127,21 @@ Result  26234.000009917407
 
 [Done] exited with code=0 in 0.049 seconds
 ```
+
+````javascript
+firstapprox 16.264705882352942
+firstApprox squares to 264.5406574394464
+firstApprox offset 0.5406574394464201 
+
+
+First approx interations 18
+Brute force interations  10
+Offset achieved 0.000004970707266238605
+Sqrt at given precision 16.24807696223486
+Target was 264
+
+Result  264.00000497070727
+````
 
 sqrt(2) to 12 decimal places
 ```javascript
