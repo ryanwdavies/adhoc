@@ -38,7 +38,7 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
   };
   ````
 
-````css
+````javascript
 sqrt(26234, 0.00001, 300)
 
 Brute force interations  218
@@ -50,7 +50,7 @@ Target was 26234
 Result  26233.999992941543
 ````
 
-````css
+````javascript
 sqrt(264, 0.00001, 300)
 
 Brute force interations  55
