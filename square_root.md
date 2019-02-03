@@ -9,6 +9,35 @@ Here in JavaScript; first imperatively using a arrow function notation, then tak
 
 (*highly recommend MPJ's [video series](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q/playlists) for all things JavaScript*). 
 
+
+````javascript
+const sqrt = (target, precision = 0.001, maxiter = 10000) => {
+
+    // block scope
+    let increment = 1
+    let guess = 1
+    let i = 0
+    
+    // first approximation
+    do {
+        if (guess ** 2 >= target) {
+            guess = guess - increment
+            increment = increment / 10
+        } else {
+            guess = guess + increment;
+        } 
+        i++
+        if (i === maxiter) { break } 
+      } while (Math.abs(guess ** 2 - target) >= precision)
+    
+    console.log("Brute force interations ", i);
+    console.log("Offset achieved", target - (guess **2));
+    console.log("Sqrt at given precision", guess);
+    console.log("Target was", target);
+    console.log("\nResult ", guess ** 2);
+  };
+  ````
+
 ## Imperative
 
 ```javascript
