@@ -98,7 +98,7 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
 ```
 
 ```javascript
-sqrt(2068, 0.000001, 300)
+sqrt(26234, 0.00001, 300)
 
 firstapprox 161.96913580246914
 firstApprox squares to 26234.00095259869
