@@ -18,7 +18,6 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
     let guess = 1
     let i = 0
     
-    // first approximation
     do {
         if (guess ** 2 >= target) {
             guess = guess - increment
