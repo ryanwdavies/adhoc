@@ -18,6 +18,7 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
     let guess = 1
     let i = 0
     
+    // first approximation
     do {
         if (guess ** 2 >= target) {
             guess = guess - increment
@@ -30,12 +31,25 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
       } while (Math.abs(guess ** 2 - target) >= precision)
     
     console.log("Brute force interations ", i);
+    console.log("Required precision", precision)
     console.log("Offset achieved", target - (guess **2));
-    console.log("Sqrt at given precision", guess);
-    console.log("Target was", target);
-    console.log("\nResult ", guess ** 2);
+    console.log("Sqrt at required precision", guess);
+    console.log("\nTarget was", target);
+    console.log("Result ", guess ** 2);
   };
   ````
+
+````css
+sqrt(26234, 0.00001, 300)
+
+Brute force interations  218
+Required precision 0.00001
+Offset achieved 0.000007058457413222641
+Sqrt at required precision 161.96913283999993
+
+Target was 26234
+Result  26233.999992941543
+````
 
 ## Imperative
 
