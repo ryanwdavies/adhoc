@@ -62,8 +62,86 @@ Target was 264
 Result  264.00000619792974
 ````
 
+## Imperative 2
+````javascript
+// JavaScript ES6(+) arrow function notation
+const sqrt = (target, precision = 0.001, maxiter = 10000) => {
+ 
+    // block scope
+    let offset;
+    let firstApprox;
+    let base = 1;
+    let guess; 
+    let i = 0
+    let increment = 1
+    
+    // first approximation
+    do {
+        base++;
+      } while (base ** 2 <= target) 
+    firstApprox = base + (target - base ** 2) / (2 * base);
+    console.log('firstapprox', firstApprox)
+    console.log('firstApprox squares to', firstApprox ** 2)
+    console.log('firstApprox offset', Math.abs(target - firstApprox ** 2), '\n')
+  
+    // brute force until precision or maxiter
+    guess = firstApprox
+    do {
+        if (guess ** 2 >= target) {
+            guess = guess - increment
+            increment = increment / 10
+        } else {
+            guess = guess + increment;
+        } 
+        i++
+        if (i === maxiter) { break } 
+      } while (Math.abs(guess ** 2 - target) >= precision)
+    
+  
+    console.log("\nFirst approx interations", base + 1);
+    console.log("Brute force interations ", i);
+    console.log("Offset achieved", Math.abs(guess **2 - target));
+    console.log("Sqrt at given precision", guess);
+    console.log("Target was", target);
+    console.log("\nResult ", guess ** 2);
+  };
+````
 
-## Imperative
+````javascript
+sqrt(26234, 0.00001, 300)
+
+firstapprox 161.96913580246914
+firstApprox squares to 26234.00095259869
+firstApprox offset 0.0009525986897642724 
+
+
+First approx interations 163
+Brute force interations  70
+Offset achieved 0.00000949797686189413
+Sqrt at given precision 161.9691328324691
+Target was 26234
+
+Result  26233.999990502023
+````
+
+````javascript
+sqrt(264, 0.00001, 300)
+  
+firstapprox 16.264705882352942
+firstApprox squares to 264.5406574394464
+firstApprox offset 0.5406574394464201 
+
+
+First approx interations 18
+Brute force interations  42
+Offset achieved 0.0000023748524995426123
+Sqrt at given precision 16.248076882352954
+Target was 264
+
+Result  264.0000023748525
+````
+
+## Imperative 3
 
 ```javascript
 // JavaScript ES6(+) arrow function notation
