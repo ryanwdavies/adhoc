@@ -97,23 +97,23 @@ const sqrt = (target, precision = 0.001, maxiter = 10000) => {
 };
 ```
 
-
 ```javascript
 sqrt(2068, 0.000001, 300)
 
-firstApprox 45.477777777777774
-firstApprox squares to 2068.228271604938
-firstApprox offset 0.22827160493807241
+firstapprox 161.96913580246914
+firstApprox squares to 26234.00095259869
+firstApprox offset 0.0009525986897642724 
 
-First approx interations 46
-Brute force interations 31
-Offset achieved 7.088319762260653e-7
-Sqrt at given precision 45.47526801140189
 
-Target was 2068
-Result 2068.000000708832
+First approx interations 163
+Brute force interations  34
+Offset achieved 0.000009917406714521348
+Sqrt at given precision 161.96913289240456
+Target was 26234
 
-[Done] exited with code=0 in 0.052 seconds
+Result  26234.000009917407
+
+[Done] exited with code=0 in 0.049 seconds
 ```
 
 sqrt(2) to 12 decimal places
