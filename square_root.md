@@ -129,6 +129,8 @@ Result  26234.000009917407
 ```
 
 ````javascript
+sqrt(264, 0.00001, 300)
+
 firstapprox 16.264705882352942
 firstApprox squares to 264.5406574394464
 firstApprox offset 0.5406574394464201 
