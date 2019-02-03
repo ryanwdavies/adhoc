@@ -3,7 +3,7 @@
 
 How to find a square root, programatically? Sounds simple right?? Maybe not so straight forwards, as discussed [here](https://math.stackexchange.com/questions/799339/how-to-calculate-the-square-root-of-a-number). 
 
-Here we write a crude programmatic approach. We use the rule of thumb method to get a close first approximation and then brute force to the required precision or until maxiter is reached. We use a coefficient in the brute force loop to improve efficiency; the natural log of the target is used since the relationship relationship between a given target and its root is not linear.
+Here we write a crude programmatic approach to brute force the square root to the require precision, or until maxiter is reached.
 
 Here in JavaScript; first imperatively using a arrow function notation, then taking a [functional](shttps://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276) approach using JavaScript's [EcmaScript(6+)](https://www.codementor.io/ajinkyax/functional-programming-with-javascript-es6-j4ysxgvpj) [[1](https://en.wikipedia.org/wiki/Ecma_International)] higher order function features and recursion.
 
@@ -49,6 +49,7 @@ Sqrt at required precision 161.96913283999993
 Target was 26234
 Result  26233.999992941543
 ````
+
 
 ## Imperative
 
